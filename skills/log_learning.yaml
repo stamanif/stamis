@@ -1,0 +1,5 @@
+name: log_learning
+description: Save a lesson, error, or better approach to the knowledge base so Stamis can reference it in future sessions.
+auto_trigger: "after_task"
+enabled: true
+command: "echo [%date% %time%] LEARNING: %args% >> knowledge_base.txt"

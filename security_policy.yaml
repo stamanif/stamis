@@ -1,0 +1,20 @@
+# Stamis Security Policy
+security_mode: "strict" # 'strict' (blocks unauthorized) or 'permissive' (warns only)
+
+# Define which processes are allowed to perform sensitive mutations
+allowed_process_lineage:
+  - "python.exe"
+  - "trade_engine.exe"
+  - "cmd.exe"
+
+# Files the agent can never touch, regardless of the tool
+protected_paths:
+  - "./.env"
+  - "./secrets/"
+  - "/etc/"
+
+# Tools that trigger ClawSniff AuditEngine (The "Privileged" list)
+privileged_tools:
+  - "execute_trade"
+  - "write_to_file"
+  - "network_request"

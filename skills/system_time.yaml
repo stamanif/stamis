@@ -1,0 +1,3 @@
+name: get_system_time
+description: Retrieves the current system date and time from the OS. Use this to provide real-time date/time stamps.
+command: "cmd /c date /t && cmd /c time /t"
